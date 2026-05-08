@@ -1,3 +1,9 @@
+---
+parent: "[[20_IT-специальности]]"
+type: concept
+description: "Концентрат для собеса по Go-конкурентности: GMP-модель (G/M/P), каналы, утечки горутин, паттерны выбора между каналом, mutex и WaitGroup."
+---
+
 # Go: горутины и каналы — концентрат для собесов
 
 G (Goroutine) → M (Machine = OS thread) → P (Processor = logical CPU) GOMAXPROCS = число P (по умолчанию = число CPU cores)
