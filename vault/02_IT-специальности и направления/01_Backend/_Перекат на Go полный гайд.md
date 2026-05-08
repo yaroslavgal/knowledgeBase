@@ -1,0 +1,337 @@
+# Перекат на Go — полный гайд (с Python/JS/Java)
+
+## Главный тезис
+
+Это уникальная ситуация — рекрутёры понимают что Go-разработчиков мало, а синтаксис учится за пару вечеров. Окно может закрыться к 2027 году по мере насыщения рынка.
+
+> «Знать сам язык всё равно ОБЯЗАТЕЛЬНО.»
+
+---
+
+## Срок переката
+
+| Темп | Срок |
+|---|---|
+| Платный курс с ментором, full-time | **2–3 недели** |
+| Самостоятельно с pet-проектами | 2–6 месяцев |
+| «Параллельно с работой по 1 часу/день» | 6–12 месяцев |
+
+**Реальные кейсы:** Senior Python → Senior Go в Ozon с 2 неделями подготовки. Получилось пройти собес, но **не прошёл испытательный срок** из-за отсутствия онбординга.
+
+---
+
+## День 1–2: Tour of Go
+
+[tour.golang.org](https://tour.golang.org) — официальный туториал. Обязательное минимум.
+
+**Что покрыть:**
+- Синтаксис (var/const, control flow)
+- Функции и multiple return
+- Структуры и методы (нет классов, есть structs + methods + interfaces)
+- Slices, maps, channels — базово
+- Errors as values (нет exceptions)
+
+**Что пропустить пока:**
+- **Дженерики** (с 1.18) — «ничем не примечательны», изучишь на работе
+- **Reflection** — экзотика
+- **CGO** — экзотика для системных задач
+
+---
+
+## Сразу после Tour: инструментарий
+
+> «Не нужно знать все встроенные инструменты, нужно знать основные.»
+
+**Must:**
+- `go mod init` / `go mod tidy` — модули
+- `go build` / `go run` — компиляция
+- `go test ./...` — тесты
+- `go test -race ./...` — race detector
+- `go test -bench ./...` — бенчмарки
+- `go vet` / `golangci-lint` — статанализ
+- `pprof` — профилирование (CPU, memory, goroutines)
+
+---
+
+## Конкурентность — отдельная тема
+
+Tour of Go даёт **очень базово**. Нужно отдельное видео/курс.
+
+**Что освоить:**
+1. Горутины, каналы, select
+2. `sync.Mutex`, `sync.WaitGroup`, `sync.Once`, `sync.RWMutex`
+3. `context.Context` — cancel, deadline, values
+4. Race detector
+5. Patterns: Worker Pool, Pipeline, Fan-out/Fan-in
+6. Memory model: happens-before гарантии
+
+См. отдельно: `_Go_горутины_каналы_концентрат.md`
+
+---
+
+## Что НЕ нужно учить до выхода на работу
+
+> «Если будешь несколько месяцев бесплатно фигачить микросервисы, ты просто выгорешь.»
+
+❌ **Не нужно:**
+- Полностью изучать Postgres / Redis / ClickHouse — научишься на работе
+- Становиться экспертом в трейсинге / мониторинге — статью прочитал и хватит
+- Писать свой микросервис с нуля — на работе будут шаблоны
+- Свою систему авторизации / свою БД
+- Глубокий k8s — на работе там будут DevOps-инженеры
+- Все паттерны GoF наизусть
+
+---
+
+## База обязательно
+
+✅ **Один веб-фреймворк:**
+- `Gin` (популярный, простой)
+- `Fiber` (Express-like, для тех кто из Node.js)
+- `Echo` (минималистичный)
+- `chi` (стандартная библиотека + роутинг)
+- Просто `net/http` (без фреймворка) — для понимания
+
+✅ **Одна БД:**
+- **Postgres** — стандарт. Драйвер `pgx`. ORM `gorm` или query builder `sqlc`
+
+✅ **Базовые инструменты:**
+- Docker (написать Dockerfile, compose)
+- Git (commit, branch, merge)
+- Базовое представление о k8s (`kubectl`, манифесты)
+- Базовое представление о CI/CD (GitHub Actions / GitLab CI)
+
+---
+
+## Особенности Go vs другие языки
+
+### vs Python
+
+| Python | Go |
+|---|---|
+| Динамическая типизация | Статическая |
+| Exceptions | Errors as values (`if err != nil`) |
+| Классы + наследование | Structs + composition (embedding) |
+| GIL | Нет GIL, настоящие goroutines |
+| Списки/словари — типы первого класса | Slices/maps — встроенные |
+| `pip` | `go modules` |
+
+### vs JavaScript
+
+| JS | Go |
+|---|---|
+| Event loop, async/await | Goroutines + channels |
+| Динамическая | Статическая |
+| Prototype inheritance | Composition |
+| `npm install` | `go get` |
+| Колбеки / промисы | Channels / context |
+
+### vs Java
+
+| Java | Go |
+|---|---|
+| Verbose | Compact |
+| OOP с классами | Structs + interfaces (duck typing) |
+| Checked exceptions | Errors as values |
+| JVM, GC ~100ms | Native, GC <10ms |
+| Spring Boot | Стандартная библиотека + лёгкие фреймворки |
+
+---
+
+## Что переносится из Python/JS/Java
+
+✅ **Переносится почти 1:1:**
+- Базовые алгоритмы и структуры данных
+- Понимание HTTP / REST / gRPC
+- Понимание баз данных и SQL
+- Опыт debugging
+- Soft skills, командная работа
+- Знание Linux / shell
+
+✅ **Адаптируется:**
+- ООП → структуры + интерфейсы (composition over inheritance)
+- Async patterns → goroutines + channels
+- Error handling → явный возврат ошибок
+
+❌ **Не переносится:**
+- Specific framework knowledge (Spring → Gin)
+- Specific ORM patterns
+- Language-specific tooling
+
+---
+
+## Подготовка к собесу при перекате
+
+### Roadmap 256 от Ozon (бесплатно)
+Инженеры Ozon рассказывают что нужно знать. Идёт по топикам.
+
+### Платные курсы
+- Stepik / Coursera / Boot.dev / Udemy — есть много
+- Выбирай по отзывам, не по цене
+
+### LeetCode на Go
+- Минимум 100 задач (Easy + Medium)
+- Для Senior — 300+
+- Прорешать паттерны: two pointers, sliding window, DP, graphs
+
+### Pet-проект
+**Что писать:**
+- REST API на Gin / Fiber
+- Postgres + миграции
+- Docker compose
+- Тесты (unit + integration)
+- README на английском
+- Pin на GitHub в Featured разделе
+
+**Примеры pet-проектов:**
+- TODO-list backend (CRUD + JWT auth)
+- URL shortener (REST + Redis)
+- Telegram-bot (long polling)
+- Chat backend (WebSocket)
+- E-commerce mini-backend (товары + корзина + заказы)
+
+---
+
+## Подвохи на собесе для свитчеров
+
+### `nil` interface vs interface с nil-значением
+
+```go
+var p *Person = nil
+var i interface{} = p
+i == nil  // false! ⚠️
+```
+
+Interface = (type, value). Если type есть, а value = nil — interface не равен nil.
+
+### Встроенные значения по умолчанию
+
+```go
+var s string  // ""
+var i int     // 0
+var b bool    // false
+var p *int    // nil
+var sl []int  // nil (НЕ пустой)
+var m map[string]int  // nil — нельзя писать без make
+```
+
+### Multiple return + named return
+
+```go
+func divide(a, b int) (result int, err error) {
+    if b == 0 {
+        err = errors.New("division by zero")
+        return  // naked return с named values
+    }
+    result = a / b
+    return
+}
+```
+
+### Defer + LIFO
+
+```go
+defer fmt.Println("1")
+defer fmt.Println("2")
+defer fmt.Println("3")
+// Output: 3, 2, 1
+```
+
+### Receiver type
+
+```go
+type MyType struct{ x int }
+
+func (m MyType) Foo() {}    // value receiver — копия
+func (m *MyType) Bar() {}   // pointer receiver — мутация возможна
+```
+
+---
+
+## Карьерные карты после перехода
+
+### Карта grade в Go
+
+| Grade | Обязанности |
+|---|---|
+| **Junior** | Простые задачи с подробным описанием, требует менторства |
+| **Middle** | Оценивает время, понимает другие направления, помогает джунам, 300+ LeetCode |
+| **Senior** | Архитектура, ментор, декомпозирует задачи на джуновские |
+| **Tech Lead** | Принимает архитектурные решения, технический контакт с PM |
+| **Staff/Principal** | Системы уровня компании, mentoring сеньоров |
+
+---
+
+## Альтернативный roadmap (Захар, 65+ собесов)
+
+1. **300 задач LeetCode** — без этого «будете плохо себя чувствовать»
+2. **Досконально язык** (G-M-P, escape analysis, runtime каналов, GC)
+3. **Базы данных** (запросы, индексы, транзакции, изоляция)
+4. **Компьютерные сети** (TCP/IP, HTTP, gRPC)
+5. **DevOps** (Docker, CI/CD, базовый k8s)
+
+---
+
+## Подготовка к собесу — параллельно
+
+| Активность | Темп |
+|---|---|
+| LeetCode | 2 задачи / день (Easy + Medium) |
+| Pet-проект | 5–10 часов / неделю |
+| Системный дизайн | 1 кейс / неделю |
+| Mock-собес | 1 раз в 2 недели |
+| Английский | 30 мин / день видео + 1 урок / неделю |
+
+**Итого:** ~15–20 часов / неделю на 2–3 месяца → готов к собесу.
+
+---
+
+## Платные курсы
+
+> «Платные курсы есть, но выбирайте сами.»
+
+**Что искать в курсе:**
+- ✅ Включает реальные собесные задачи
+- ✅ Code review со ментором
+- ✅ Pet-проект завершённый
+- ✅ Подготовка к лайвкодингу
+- ✅ Помощь с резюме
+
+**Что игнорировать:**
+- ❌ «Полный курс по Go 100 часов» (не нужно)
+- ❌ Курсы без code review
+- ❌ Без подготовки к собесам
+- ❌ Только теория без практики
+
+**Бесплатные альтернативы:**
+
+- **Roadmap 256 от Ozon** — инженеры Ozon рассказывают что нужно знать
+- **Go by Example** (gobyexample.com) — справочник
+- **Effective Go** (golang.org/doc/effective_go) — официальный гайд
+- **Ultimate Go Tour** (Ardanlabs) — глубокий курс
+- **«The Go Programming Language»** (Donovan & Kernighan) — книга
+
+---
+
+## Чек-лист перехода на Go
+
+- [ ] Tour of Go пройден
+- [ ] Один pet-проект (REST API + Postgres + Docker + тесты) на GitHub
+- [ ] Понимание `sync` пакета и каналов
+- [ ] Race detector использовал
+- [ ] 100+ LeetCode задач на Go
+- [ ] Один веб-фреймворк освоен (Gin/Fiber/chi)
+- [ ] Базовое понимание k8s (kubectl, манифесты)
+- [ ] System Design 3+ кейсов
+- [ ] Резюме адаптировано: Go-релевантный опыт впереди
+- [ ] Mock-собес на Go пройден 3+ раз
+- [ ] Готов к лайвкодингу: 1 Easy + 1 Medium / час
+
+## Связи
+
+<!-- auto-links:start -->
+
+### Связанные
+- [[20_IT-специальности]] — родительская карта области.
+<!-- auto-links:end -->
+

@@ -1,0 +1,20 @@
+{
+  "enableAllProjectMcpServers": true,
+  "env": {
+    "ENABLE_TOOL_SEARCH": "auto:5",
+    "MAX_MCP_OUTPUT_TOKENS": "20000"
+  },
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Read(./.git/**)",
+      "Read(./.opencode/node_modules/**)",
+      "Bash(git reset --hard*)",
+      "Bash(git checkout --*)",
+      "Bash(rm -rf /)"
+    ]
+  }
+}
+

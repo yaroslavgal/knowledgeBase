@@ -1,0 +1,104 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    ".opencode/README.md"
+  ],
+  "mcp": {
+    "qmd": {
+      "type": "local",
+      "command": [
+        "qmd",
+        "mcp"
+      ],
+      "enabled": true
+    }
+  },
+  "default_agent": "vault",
+  "permission": {
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "bash": "allow",
+    "edit": "allow",
+    "skill": {
+      "*": "allow"
+    },
+    "qmd_*": "allow"
+  },
+  "agent": {
+    "vault": {
+      "description": "Primary Obsidian vault agent",
+      "mode": "primary",
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "bash": "allow",
+        "edit": "allow",
+        "skill": {
+          "*": "allow"
+        },
+        "qmd_*": "allow"
+      }
+    },
+    "connection-scout": {
+      "description": "Read-only link candidate and mechanism scout",
+      "mode": "subagent",
+      "prompt": "{file:agents/connection-scout.md}",
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "bash": "deny",
+        "edit": "deny",
+        "qmd_*": "allow"
+      }
+    },
+    "structure-scout": {
+      "description": "Read-only folder, MOC, parent, and topology scout",
+      "mode": "subagent",
+      "prompt": "{file:agents/structure-scout.md}",
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "bash": "deny",
+        "edit": "deny",
+        "qmd_*": "allow"
+      }
+    },
+    "reviewer": {
+      "description": "Fresh-context read-only vault reviewer",
+      "mode": "subagent",
+      "prompt": "{file:agents/reviewer.md}",
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "bash": "deny",
+        "edit": "deny",
+        "qmd_*": "allow"
+      }
+    },
+    "vault-scanner": {
+      "description": "Read-only vault scanner for schema, links, structure, and duplicates",
+      "mode": "subagent",
+      "prompt": "{file:agents/vault-scanner.md}",
+      "permission": {
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "bash": "deny",
+        "edit": "deny",
+        "qmd_*": "allow"
+      }
+    }
+  }
+}

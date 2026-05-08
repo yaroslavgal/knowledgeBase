@@ -1,0 +1,16 @@
+# Obsidian
+.obsidian/workspace*
+.obsidian/cache
+.obsidian/appearance.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# QMD local cache (sits outside vault, but just in case)
+.qmd-cache/
+
+# Temp
+*.tmp
+*~
