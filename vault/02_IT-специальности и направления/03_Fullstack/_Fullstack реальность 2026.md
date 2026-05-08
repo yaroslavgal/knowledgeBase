@@ -127,7 +127,7 @@ Cross-cutting:
 - [ ] Один деплой в продакшене (Vercel/Netlify + Railway/Render/Fly).
 - [ ] Тесты: unit + integration хотя бы на бэке.
 - [ ] System Design базовый: URL shortener, чат, лента новостей.
-- [ ] 1–2 fullstack пет-проекта на GitHub с README, деплоем, скриншотами.
+- [ ] 1–2 fullstack пет-проекта с деплоем (живой URL) — это работает, в отличие от ссылки на GitHub. На сам GitHub-профиль почти никто не зайдёт, важен факт работающего продукта.
 
 ## Связи
 

@@ -181,7 +181,7 @@ Tour of Go даёт **очень базово**. Нужно отдельное �
 - Docker compose
 - Тесты (unit + integration)
 - README на английском
-- Pin на GitHub в Featured разделе
+- Pet-проект нужен чтобы рассказать о нём на собесе, а не для GitHub-профиля — туда никто не заходит
 
 **Примеры pet-проектов:**
 - TODO-list backend (CRUD + JWT auth)
@@ -316,7 +316,7 @@ func (m *MyType) Bar() {}   // pointer receiver — мутация возмож�
 ## Чек-лист перехода на Go
 
 - [ ] Tour of Go пройден
-- [ ] Один pet-проект (REST API + Postgres + Docker + тесты) на GitHub
+- [ ] Один pet-проект (REST API + Postgres + Docker + тесты) — для рассказа на собесе, не для GitHub-витрины
 - [ ] Понимание `sync` пакета и каналов
 - [ ] Race detector использовал
 - [ ] 100+ LeetCode задач на Go

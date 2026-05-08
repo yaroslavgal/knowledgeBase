@@ -244,7 +244,7 @@ LLM-стек особо: знание LangChain / LlamaIndex / vLLM в 2026 — 
 - [ ] Деплой модели в FastAPI + Docker + k8s.
 - [ ] MLflow или альтернатива для экспериментов.
 - [ ] Один LLM-проект (RAG минимум).
-- [ ] Один продакшен ML-pipeline на GitHub с README и деплоем.
+- [ ] Один продакшен ML-pipeline с README и деплоем — для рассказа на собесе. На GitHub-профиль никто не зайдёт, важен факт работающего pipeline.
 
 ### Data Engineer
 - [ ] SQL глубоко (window functions, оптимизация на 1М строк, EXPLAIN).
@@ -253,7 +253,7 @@ LLM-стек особо: знание LangChain / LlamaIndex / vLLM в 2026 — 
 - [ ] Airflow: написал DAG с conditional logic.
 - [ ] dbt: модели, тесты.
 - [ ] PySpark basics.
-- [ ] Один полный pipeline на GitHub.
+- [ ] Один полный pipeline в работе — для собесного рассказа, не для GitHub-витрины.
 
 ## Связи
 
