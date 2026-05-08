@@ -1,0 +1,6 @@
+[submodule "obsidian-agent"]
+	path = obsidian-agent
+	url = git@github.com:dww44/obsidian-agent.git
+[submodule "vault"]
+	path = vault
+	url = https://github.com/yaroslavgal/obsidian-vault.git
