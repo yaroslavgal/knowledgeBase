@@ -129,7 +129,7 @@ ML Engineer платят выше из-за дефицита и сложност
 
 ### Data Scientist (с нуля 9–12 мес)
 
-**Месяц 1–2:** Python + SQL + базовая статистика. Курс «Python для анализа данных» (Pandas) + любой SQL-задачник (LeetCode SQL Easy/Medium).
+**Месяц 1–2:** Python + SQL + базовая статистика. Курс «Python для анализа данных» (Pandas) + любой SQL-задачник на реальных кейсах (StrataScratch, DataLemur). LeetCode SQL — слабее, потому что задачи там оторваны от реальной работы аналитика.
 
 **Месяц 2–4:** Классический ML — scikit-learn. 5–7 учебных задач на Kaggle (House Prices, Titanic, и реалистичные tabular).
 

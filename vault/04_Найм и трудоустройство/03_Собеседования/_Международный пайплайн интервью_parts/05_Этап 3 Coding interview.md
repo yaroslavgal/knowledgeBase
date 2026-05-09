@@ -7,14 +7,22 @@ description: "1. **Понять задачу** (2–3 мин): уточни вв
 
 ## Этап 3: Coding interview
 
-### LeetCode-style
+### Когда вообще нужен LeetCode-grind
 
-- **Объём:** Top 150 Interview (Easy + Medium), Top 50 Hard для FAANG
-- **Время:** 30–45 мин на одну задачу + обсуждение
+**Только FAANG и FAANG-аналоги** (Google, Meta, Amazon, Apple, Stripe, Datadog). Это <5% международного рынка. На остальные 95% (стартапы, mid-size продуктовые) — алгоритмы либо не спрашивают, либо формально (типа two sum + объяснение сложности).
+
+Если идёшь не в bigtech — не убивай месяцы на 300 задач. Лучше:
+- Один сильный pet-проект на стеке компании
+- Mock-собесы на английском (Pramp, ChatGPT Voice)
+- System Design (для middle+ это решает больше, чем алгоритмы)
+
+### Если всё-таки идёшь в bigtech
+
 - **Платформы:** HackerRank, CoderPad, Hackerearth
+- **Время:** 30–45 мин на одну задачу + обсуждение
 - **Язык:** обычно твой (Go), но FAANG любят Python/Java
 
-### Стратегия решения
+### Стратегия решения (универсальная — пригодится и без bigtech)
 
 1. **Понять задачу** (2–3 мин): уточни ввод/вывод, edge cases
 2. **Naive решение** вслух: «brute force is O(n²), let me think about better»
@@ -23,18 +31,7 @@ description: "1. **Понять задачу** (2–3 мин): уточни вв
 5. **Тесты** (5 мин): edge cases, empty input, single element, large input
 6. **Дебаг** если есть ошибки
 
-### Топ-категории задач
-
-| Категория | Что освоить |
-|---|---|
-| **Arrays / Strings** | Two pointers, sliding window, prefix sum |
-| **Hash maps** | Counting, frequency, lookup |
-| **Linked lists** | Reverse, merge, cycle detection (Floyd) |
-| **Trees / Graphs** | DFS, BFS, recursion, BST |
-| **Dynamic Programming** | Memoization, tabulation, 1D/2D DP |
-| **Sorting / Searching** | Binary search, merge sort, quicksort |
-| **Greedy** | Interval scheduling, activity selection |
-| **Backtracking** | N-queens, permutations, combinations |
+Главное — не молчать. Интервьюер оценивает процесс мышления, а не зазубренный паттерн.
 
 ---
 

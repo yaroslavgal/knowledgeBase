@@ -162,7 +162,7 @@ Mobile — стабильная ниша со средней конкуренц�
 
 **Месяц 6–9: подготовка к собесу + поиск middle-оффера**
 - Банк вопросов по платформе (Compose internals, lifecycle, мемори-менеджмент).
-- LeetCode Easy/Medium на Kotlin/Swift.
+- 10–15 типовых mobile-задач (lifecycle bugs, retain cycles, recomposition, navigation) на Kotlin/Swift. LeetCode-гринд под mobile-собес почти бесполезен — гоняют lifecycle и memory, а не алгоритмы.
 - Дополнительный пет-проект с интересной фичей (offline-first, WebSocket, ML-on-device).
 - Параллельный поиск 15–20 компаний.
 

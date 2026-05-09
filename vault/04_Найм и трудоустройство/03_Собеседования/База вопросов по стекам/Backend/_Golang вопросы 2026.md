@@ -29,7 +29,7 @@ type: concept
 | 11 | Паттерны concurrency — fan-in/out, errgroup | 60% | Middle+ |
 | 12 | Микросервисы — Saga, circuit breaker | 50-70% | Middle+ |
 | 13 | gRPC vs REST | 50% | Middle+ |
-| 14 | Алгоритмы (LeetCode) | 40-60% | Зависит от компании |
+| 14 | Алгоритмы (LeetCode-style) | bigtech ~50%, продуктовые <10% | Зависит от компании, не от грейда |
 | 15 | System Design | 30% мидл / 70% сеньор | Senior |
 
 ---
