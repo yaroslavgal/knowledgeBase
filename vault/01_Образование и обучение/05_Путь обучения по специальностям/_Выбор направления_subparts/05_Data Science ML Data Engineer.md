@@ -23,11 +23,11 @@ description: "**Data Scientist**"
 - **Порог:** Средне-высокий — SQL очень глубоко, Python, распределённые системы
 
 **Roadmap (для DS):**
-1. Python (numpy, pandas) — 2 мес
-2. Математика (линейная алгебра, статистика) — 2–3 мес
-3. SQL — 1 мес
-4. Классический ML (sklearn, sklearn-методы) — 2 мес
-5. Deep Learning (PyTorch / TensorFlow) — 3+ мес
+1. Python (numpy, pandas) — 40 часов сфокусированной работы
+2. Математика (линейная алгебра, статистика) — 40–60 часов
+3. SQL — 20 часов
+4. Классический ML (sklearn, sklearn-методы) — 40 часов
+5. Deep Learning (PyTorch / TensorFlow) — 60+ часов
 6. Один проект на Kaggle / на хорошем датасете — параллельно
 7. **С 2024 — отдельная ниша LLM-инженеров**: prompt engineering, RAG, fine-tuning
 

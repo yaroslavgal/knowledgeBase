@@ -122,38 +122,38 @@ DevOps — не первая профессия для входа в IT. Луч�
 
 **Если уже разработчик (полгода-год бэкендера):**
 
-**Месяц 1–2: Linux + Docker + сети**
+**Этап 1 (0–40 часов): Linux + Docker + сети**
 - Установить Linux-VM (Ubuntu/Debian), жить в терминале.
 - Linux Foundation course по Linux (бесплатный).
 - Docker: написать Dockerfile для своего пет-проекта, поднять с docker-compose.
 - Базовые сети: что такое NAT, как работает Docker network.
 
-**Месяц 2–3: Kubernetes**
+**Этап 2 (40–60 часов): Kubernetes**
 - Поднять локальный k8s (minikube / kind / k3s).
 - Деплоить свой пет-проект в k8s: Pod → Deployment → Service → Ingress.
 - ConfigMap, Secret, переменные окружения.
 - Helm chart для проекта.
 
-**Месяц 3–4: CI/CD + IaC**
+**Этап 3 (60–80 часов): CI/CD + IaC**
 - GitHub Actions для пет-проекта: build, test, deploy.
 - Terraform: создать через него VM в одном из облаков.
 - Полный цикл: код → CI → Docker image → deploy в k8s через ArgoCD.
 
-**Месяц 4–6: продакшен-уровень**
+**Этап 4 (80–120 часов): продакшен-уровень**
 - Развернуть полноценный стек: приложение + БД + Redis + Prometheus + Grafana + Loki.
 - Настроить alerts (Slack/Telegram bot).
 - Один сложный сценарий: blue-green deployment или canary.
 - Disaster recovery план.
 
-**Месяц 6–9: подготовка к собесу + поиск middle DevOps-оффера**
+**Этап 5 (120–200 часов): подготовка к собесу + поиск middle DevOps-оффера**
 - Банк вопросов по DevOps (k8s internals, Linux deep, troubleshooting).
 - System Design на DevOps: «как масштабировать сервис до 1М RPS», «спроектируй CI/CD для микросервисов».
 - Параллельный поиск 15–20 компаний.
 
 **Если идёшь в DevOps с нуля без опыта разработки:**
-- Срок 9–12 месяцев минимум.
-- Сначала Linux + Bash + Python (3 месяца).
-- Один backend-фреймворк (Python + FastAPI) на уровне «могу написать REST API» (2 месяца).
+- Срок 200–240 часов сфокусированной подготовки минимум.
+- Сначала Linux + Bash + Python (60 часов).
+- Один backend-фреймворк (Python + FastAPI) на уровне «могу написать REST API» (40 часов).
 - Дальше — DevOps-стек как описано выше.
 
 ## Темы, которые точно спросят на middle-собесе

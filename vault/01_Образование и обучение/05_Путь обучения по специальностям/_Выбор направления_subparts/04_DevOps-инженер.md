@@ -12,15 +12,15 @@ description: "**Что делает:** Инфраструктура, автом�
 **Прямой вход с нуля редок** — обычно перекатываются из админов или Backend
 
 **Roadmap:**
-1. Linux (CLI, bash, права, процессы) — 1–2 мес
-2. Git — 2 нед
-3. Сети (TCP/IP, HTTP, DNS) — 1 мес
-4. Docker — 1 мес
-5. CI/CD (GitHub Actions / GitLab CI / Jenkins) — 1 мес
-6. Kubernetes — 2–3 мес (самая сложная часть)
-7. Terraform / IaC — 1 мес
-8. Облака (AWS / GCP / Yandex Cloud) — 1–2 мес
-9. Мониторинг (Prometheus, Grafana, ELK) — 1 мес
+1. Linux (CLI, bash, права, процессы) — 20–40 часов сфокусированной работы
+2. Git — 10 часов
+3. Сети (TCP/IP, HTTP, DNS) — 20 часов
+4. Docker — 20 часов
+5. CI/CD (GitHub Actions / GitLab CI / Jenkins) — 20 часов
+6. Kubernetes — 40–60 часов (самая сложная часть)
+7. Terraform / IaC — 20 часов
+8. Облака (AWS / GCP / Yandex Cloud) — 20–40 часов
+9. Мониторинг (Prometheus, Grafana, ELK) — 20 часов
 10. Любой ЯП на уровне написания утилит (Python / Go) — параллельно
 
 **Лучшие ресурсы:**

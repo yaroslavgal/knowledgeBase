@@ -14,12 +14,12 @@ description: "**Что делает:** Создаёт визуальную ча�
 **Стек:** HTML, CSS, JavaScript → React (доминирует в РФ) или Vue → TypeScript → Next.js / Nuxt
 
 **Roadmap:**
-1. HTML + CSS (2–4 нед)
-2. JavaScript (2–3 мес) — самая важная фаза
+1. HTML + CSS (10–20 часов сфокусированной работы)
+2. JavaScript (40–60 часов) — самая важная фаза
 3. React или Vue 
 4. TypeScript 
 5. Git, Vite/Webpack, REST API, GraphQL (параллельно)
-6. Next.js или похожий мета-фреймворк (1–2 мес)
+6. Next.js или похожий мета-фреймворк (20–40 часов)
 
 **Ресурсы:**
 - The Odin Project (foundations + JavaScript track)
